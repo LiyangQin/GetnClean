@@ -6,11 +6,11 @@
 ## 6. set with the average of each variable for each activity and each subject.
 
 getdata <- function(url, filename) {
-  if (!file.exists(dest_file)) {
-    download.file(url, destfile = filename, method = "curl")
+  if (!file.exists(filename)) {
+    download.file(url, destfile = filename)
   }
   if (!file.exists("UCI HAR Dataset")) {
-    unzip(dest_file)
+    unzip(filename)
   }
   filename
 }
@@ -32,8 +32,8 @@ x_train <- read.table("./UCI HAR Dataset/train/X_train.txt")
 y_train <- read.table("./UCI HAR Dataset/train/y_train.txt")
 
 ## Label the columns of data sets accordingly.
-sub <- rbind(sub_test, sub_train)
-colnames(sub) <- "subject"
+subject <- rbind(sub_test, sub_train)
+colnames(subject) <- "subject"
 
 label <- rbind(y_test, y_train)
 label <- merge(label, act_labels, by=1)[,2]
@@ -47,4 +47,3 @@ filtered <- data[,c(1,2,grep("-mean|-std", colnames(data)))]
 tidy = dcast(melt(filtered, id.var = c("subject", "label")) , subject + label ~ variable, mean)
 
 write.table(tidy, file="tidy_data.txt")
-
