@@ -3,6 +3,9 @@
 The raw data was collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: 
 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+## Data Set Information:
+=======================
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 
 ## Feature Selection 
 =================
@@ -19,36 +22,36 @@ These signals were used to estimate variables of the feature vector for each pat
 ## Data Dictionary
 The data comes in a Zip file with two folders: "Test" and "Train"
 
-For Test: 
-Triaxial acceleration from the estimated body acceleration
-body_acc_x_test     acceleration level signal on the x direction
-body_acc_y_test     acceleration level signal on the y direction
-body_acc_z_test     acceleration level signal on the z direction
+* For Test: 
+*Triaxial acceleration from the estimated body acceleration
+*body_acc_x_test     acceleration level signal on the x direction
+*body_acc_y_test     acceleration level signal on the y direction
+*body_acc_z_test     acceleration level signal on the z direction
+------
+*Angular velocity vector. The units are radians/second.
+*body_gyro_x_test
+*body_gyro_y_test
+*body_gyro_z_test
+------
+*Triaxial acceleration from the accelerometer (total acceleration)
+*total_acc_x_test     acceleration level signal on the x direction
+*total_acc_x_test     acceleration level signal on the y direction
+*total_acc_x_test     acceleration level signal on the z direction
+===
 
-Angular velocity vector. The units are radians/second.
-body_gyro_x_test
-body_gyro_y_test
-body_gyro_z_test
-
-Triaxial acceleration from the accelerometer (total acceleration)
-total_acc_x_test     acceleration level signal on the x direction
-total_acc_x_test     acceleration level signal on the y direction
-total_acc_x_test     acceleration level signal on the z direction
-
-
-For Train: 
-Triaxial acceleration from the estimated body acceleration
-body_acc_x_train     acceleration level signal on the x direction
-body_acc_y_train     acceleration level signal on the y direction
-body_acc_z_train     acceleration level signal on the z direction
-
-Angular velocity vector. The units are radians/second.
-body_gyro_x_train
-body_gyro_y_train
-body_gyro_z_train
-
-Triaxial acceleration from the accelerometer (total acceleration)
-total_acc_x_train     acceleration level signal on the x direction
-total_acc_x_train     acceleration level signal on the y direction
-total_acc_x_train     acceleration level signal on the z direction
+*For Train: 
+*Triaxial acceleration from the estimated body acceleration
+*body_acc_x_train     acceleration level signal on the x direction
+*body_acc_y_train     acceleration level signal on the y direction
+*body_acc_z_train     acceleration level signal on the z direction
+---
+*Angular velocity vector. The units are radians/second.
+*body_gyro_x_train
+*body_gyro_y_train
+*body_gyro_z_train
+---
+*Triaxial acceleration from the accelerometer (total acceleration)
+*total_acc_x_train     acceleration level signal on the x direction
+*total_acc_x_train     acceleration level signal on the y direction
+*total_acc_x_train     acceleration level signal on the z direction
 
