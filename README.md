@@ -1,2 +1,2 @@
 # GetnClean
-For the Coursera Course, Getting and Cleaning Data
+For the Coursera Course: Getting and Cleaning Data
