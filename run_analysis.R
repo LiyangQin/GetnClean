@@ -16,7 +16,8 @@ getdata <- function(url, filename) {
 }
 
 runUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-getdata(runUrl,'rundata.zip')
+## getdata(runUrl,'rundata.zip') ## Enable this line when the folder is not in 
+## pre-downloaded to your working directory
 library(reshape2)
 
 # Load all files into R
@@ -46,4 +47,4 @@ data <- cbind(subject, label, data)
 filtered <- data[,c(1,2,grep("-mean|-std", colnames(data)))]
 tidy = dcast(melt(filtered, id.var = c("subject", "label")) , subject + label ~ variable, mean)
 
-write.table(tidy, file="tidy_data.txt")
+write.table(tidy, file="tidy_data.txt", row.names=FALSE)
