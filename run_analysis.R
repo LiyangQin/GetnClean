@@ -16,7 +16,7 @@ getdata <- function(url, filename) {
 }
 
 runUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-## getdata(runUrl,'rundata.zip') ## Enable this line when the folder is not in 
+## getdata(runUrl,'rundata.zip') ## Enable this line when the folder is not
 ## pre-downloaded to your working directory
 library(reshape2)
 
