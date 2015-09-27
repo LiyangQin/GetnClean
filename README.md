@@ -2,10 +2,10 @@
 For the Coursera Course: Getting and Cleaning Data Course Project
 
 ## This project contains 4 elements of the data cleanning process.
-* 1. The raw data comes from UCI Machine Learning Repository, which can be access through the following link:
+* 1. The raw data comes from UCI Machine Learning Repository, which can be accessed through the following link:
   https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
-* 2. The code book on more information of the data is included in the CodeBook.md file;
-* 3. An instruction book on the process of creating the final clean data. This is contains in a R script -- run_analysis.R -- which will calculate means per activity, per subject of the mean and Standard deviation of the Human Activity Recognition Using Smartphones Dataset.
+* 2. More information on the data is included in the CodeBook.md file;
+* 3. Instructions on the process of creating the final clean data is logged in a R script -- run_analysis.R -- which will calculate means per activity, per subject of the mean and Standard deviation of the Human Activity Recognition Using Smartphones Dataset.
 * 4. A clean data set after execute the R script. The result should be stored as "tidy_data.txt"
 
 ## More on `run_analysis.R`:
