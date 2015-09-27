@@ -23,12 +23,28 @@ library(reshape2)
 act_labels <- read.table("./UCI HAR Dataset/activity_labels.txt")
 features <- read.table("./UCI HAR Dataset/features.txt")
 ## Test folder
-subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt")
+sub_test <- read.table("./UCI HAR Dataset/test/subject_test.txt")
 x_test <- read.table("./UCI HAR Dataset/test/X_test.txt")
 y_test <- read.table("./UCI HAR Dataset/test/y_test.txt")
 ## train folder
-train_sub <- read.table("./UCI HAR Dataset/train/subject_train.txt")
+sub_train <- read.table("./UCI HAR Dataset/train/subject_train.txt")
 x_train <- read.table("./UCI HAR Dataset/train/X_train.txt")
 y_train <- read.table("./UCI HAR Dataset/train/y_train.txt")
 
+## Label the columns of data sets accordingly.
+sub <- rbind(sub_test, sub_train)
+colnames(sub) <- "subject"
+
+label <- rbind(y_test, y_train)
+label <- merge(label, act_labels, by=1)[,2]
+
+data <- rbind(x_test, x_train)
+colnames(data) <- features[, 2]
+data <- cbind(subject, label, data)
+
+##  calculate means per activity, per subject of the mean and Standard deviation 
+filtered <- data[,c(1,2,grep("-mean|-std", colnames(data)))]
+tidy = dcast(melt(filtered, id.var = c("subject", "label")) , subject + label ~ variable, mean)
+
+write.table(tidy, file="tidy_data.txt")
 
