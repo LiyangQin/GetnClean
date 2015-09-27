@@ -22,36 +22,35 @@ These signals were used to estimate variables of the feature vector for each pat
 ## Data Dictionary
 The data comes in a Zip file with two folders: "Test" and "Train"
 
-* For Test: 
-*Triaxial acceleration from the estimated body acceleration
-*body_acc_x_test     acceleration level signal on the x direction
-*body_acc_y_test     acceleration level signal on the y direction
-*body_acc_z_test     acceleration level signal on the z direction
-------
-*Angular velocity vector. The units are radians/second.
-*body_gyro_x_test
-*body_gyro_y_test
-*body_gyro_z_test
-------
-*Triaxial acceleration from the accelerometer (total acceleration)
-*total_acc_x_test     acceleration level signal on the x direction
-*total_acc_x_test     acceleration level signal on the y direction
-*total_acc_x_test     acceleration level signal on the z direction
-===
+For Test: 
+* Triaxial acceleration from the estimated body acceleration
+* body_acc_x_test     acceleration level signal on the x direction
+* body_acc_y_test     acceleration level signal on the y direction
+* body_acc_z_test     acceleration level signal on the z direction
 
-*For Train: 
-*Triaxial acceleration from the estimated body acceleration
-*body_acc_x_train     acceleration level signal on the x direction
-*body_acc_y_train     acceleration level signal on the y direction
-*body_acc_z_train     acceleration level signal on the z direction
----
-*Angular velocity vector. The units are radians/second.
-*body_gyro_x_train
-*body_gyro_y_train
-*body_gyro_z_train
----
-*Triaxial acceleration from the accelerometer (total acceleration)
-*total_acc_x_train     acceleration level signal on the x direction
-*total_acc_x_train     acceleration level signal on the y direction
-*total_acc_x_train     acceleration level signal on the z direction
+* Angular velocity vector. The units are radians/second.
+* body_gyro_x_test
+* body_gyro_y_test
+* body_gyro_z_test
+
+* Triaxial acceleration from the accelerometer (total acceleration)
+* total_acc_x_test     acceleration level signal on the x direction
+* total_acc_y_test     acceleration level signal on the y direction
+* total_acc_z_test     acceleration level signal on the z direction
+
+For Train: 
+* Triaxial acceleration from the estimated body acceleration
+* body_acc_x_train     acceleration level signal on the x direction
+* body_acc_y_train     acceleration level signal on the y direction
+* body_acc_z_train     acceleration level signal on the z direction
+
+* Angular velocity vector. The units are radians/second.
+* body_gyro_x_train
+* body_gyro_y_train
+* body_gyro_z_train
+
+* Triaxial acceleration from the accelerometer (total acceleration)
+* total_acc_x_train     acceleration level signal on the x direction
+* total_acc_y_train     acceleration level signal on the y direction
+* total_acc_z_train     acceleration level signal on the z direction
 
